@@ -1,21 +1,13 @@
-void main(){
-  int a=10;
-  String b="Question 1";
-  double c=12.23;
-  bool d=(4>2);
+//Create a list of integers (e.g., [10, 20, 30, 40, 50]). Print the entire list. 
+//Also print the first element, last element, and the length of the list using 
+//.first, .last, and .length properties.
 
-  print(a);
-  print(b);
-  print(c);
-  print(d);
 
-  var city = 'Mumbai';
-  var marks = 95;
+void main() {
+  List<int> numbers = [10, 20, 30, 40, 50];
 
-  print(city);
-  print(marks);
-
-  final country = 'India';
-
-  print(country);
+  print('Entire list: $numbers');
+  print('First element: ${numbers.first}');
+  print('Last element: ${numbers.last}');
+  print('Length of list: ${numbers.length}');
 }

@@ -1,14 +1,20 @@
-void main(){
-  int a=10;
-  int b=20;
-  int temp;
+//Create a mutable list of strings. Add two new elements using .add() and .addAll(). 
+//Remove an element using .remove() and .removeAt(). Print the list after each operation 
+//to see the changes.
 
-  print("Before Swapping $a,$b ");
+void main() {
+  List<String> fruits = ['Apple', 'Banana', 'Cherry'];
+  print('Initial list: $fruits');
 
-  temp=a;
-  a=b;
-  b=temp;
+  fruits.add('Date');
+  print('After .add("Date"): $fruits');
 
-  print("After Swapping $a,$b ");
+  fruits.addAll(['Elderberry', 'Fig']);
+  print('After .addAll(["Elderberry", "Fig"]): $fruits');
 
+  fruits.remove('Apple');
+  print('After .remove("Apple"): $fruits');
+
+  fruits.removeAt(1);
+  print('After .removeAt(1): $fruits');
 }

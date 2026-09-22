@@ -1,30 +1,25 @@
-void main(){
-  int day=2;
+//Create a Map of countries to capitals. Iterate through keys using .keys, 
+//values using .values, and entries using .entries, printing each.
 
-  switch(day){
-    case 1:
-    print("Monday");
-    break;
-    case 2:
-    print("Tuesday");
-    break;
-    case 3:
-    print("Wednesday");
-    break;
-    case 4:
-    print("Thursday");
-    break;
-    case 5:
-    print("Friday");
-    break;
-    case 6:
-    print("Saturday");
-    break;
-    case 7:
-    print("Sunday");
-    break;
-    default:
-    print("invalid day");
-    break;
+void main() {
+  Map<String, String> capitals = {
+    'India': 'New Delhi',
+    'USA': 'Washington D.C.',
+    'Japan': 'Tokyo',
+  };
+
+  print('--- Keys ---');
+  for (var key in capitals.keys) {
+    print('Key: $key');
+  }
+
+  print('\n--- Values ---');
+  for (var value in capitals.values) {
+    print('Value: $value');
+  }
+
+  print('\n--- Entries ---');
+  for (var entry in capitals.entries) {
+    print('Country: ${entry.key}, Capital: ${entry.value}');
   }
 }

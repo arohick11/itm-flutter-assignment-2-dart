@@ -1,15 +1,13 @@
-bool isPalindrome(int num) {
-  int original = num;
-  int reversed = 0;
-  while (num > 0) {
-    int digit = num % 10;
-    reversed = reversed * 10 + digit;
-    num = num ~/ 10;
-  }
-  return original == reversed;
-}
+//Given two Lists of integers, convert both to Sets and find their common 
+//elements using .intersection(). Print the resulting Set.
 
 void main() {
-  int num = 121;
-  print(isPalindrome(num));
+  List<int> list1 = [1, 2, 3, 4];
+  List<int> list2 = [3, 4, 5, 6];
+
+  Set<int> set1 = list1.toSet();
+  Set<int> set2 = list2.toSet();
+
+  Set<int> commonElements = set1.intersection(set2);
+  print('Common Elements: $commonElements');
 }

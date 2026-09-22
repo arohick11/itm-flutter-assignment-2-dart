@@ -1,38 +1,15 @@
-void main() {
-  int a = 10;
-  int b = 25;
-  int c = 15;
-  int d = 30;
-  int max;
+//Merge two Maps using the spread operator (...) and the .addAll() method, 
+//and print the merged Maps.
 
-  if (a > b) {
-    if (a > c) {
-      if (a > d) {
-        max = a;
-      } else {
-        max = d;
-      }
-    } else {
-      if (c > d) {
-        max = c;
-      } else {
-        max = d;
-      }
-    }
-  } else {
-    if (b > c) {
-      if (b > d) {
-        max = b;
-      } else {
-        max = d;
-      }
-    } else {
-      if (c > d) {
-        max = c;
-      } else {
-        max = d;
-      }
-    }
-  }
-  print("Maximum: $max");
+void main() {
+  Map<String, int> map1 = {'a': 1, 'b': 2};
+  Map<String, int> map2 = {'b': 3, 'c': 4};
+
+  Map<String, int> mergedSpread = {...map1, ...map2};
+  print('Merged using spread operator: $mergedSpread');
+
+  Map<String, int> mergedAddAll = {};
+  mergedAddAll.addAll(map1);
+  mergedAddAll.addAll(map2);
+  print('Merged using .addAll(): $mergedAddAll');
 }

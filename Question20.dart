@@ -1,19 +1,12 @@
+//Create two Sets of integers. Find and print their union, intersection, and difference.
+
 void main() {
-  int num = 29;
-  bool isPrime = true;
-  if (num <= 1) {
-    isPrime = false;
-  } else {
-    for (int i = 2; i <= num ~/ 2; i++) {
-      if (num % i == 0) {
-        isPrime = false;
-        break;
-      }
-    }
-  }
-  if (isPrime) {
-    print("Prime");
-  } else {
-    print("Not prime");
-  }
+  Set<int> setA = {1, 2, 3, 4};
+  Set<int> setB = {3, 4, 5, 6};
+
+  print('Set A: $setA');
+  print('Set B: $setB');
+  print('Union: ${setA.union(setB)}');
+  print('Intersection: ${setA.intersection(setB)}');
+  print('Difference (Set A - Set B): ${setA.difference(setB)}');
 }

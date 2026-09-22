@@ -1,8 +1,9 @@
+//Create a Set of vowels. Check if specific characters exist in the Set 
+//using .contains() and print the boolean results.
+
 void main() {
-  int n = 5;
-  int fact = 1;
-  for (int i = 1; i <= n; i++) {
-    fact *= i;
-  }
-  print("Factorial of $n is $fact");
+  Set<String> vowels = {'a', 'e', 'i', 'o', 'u'};
+
+  print('Contains "a"? ${vowels.contains('a')}');
+  print('Contains "z"? ${vowels.contains('z')}');
 }

@@ -1,23 +1,18 @@
+//Count how many times each element appears in the list. 
+//Use a Map<int, int> to store frequencies. 
+//Iterate through the list and update the map. Print each element with its frequency.
+
 void main(){
-  final pi=3.14;
+  List numbers=[1,2,3,4,5,6,67,12,1,11,11,1,12];
 
-  int r=100;
-  double area_of_circle=pi*(r*r);
+  Map<int,int> frequencyMap={};
 
-  print("Area of Circle. $area_of_circle");
+  for (int num in numbers){
+    frequencyMap[num]=(frequencyMap[num]??0)+1;
+  }
 
-  int length=100;
-  int width=10;
-
-  int area_of_rectangle=width*length;
-
-  print("Area of rectangle. $area_of_rectangle");
-
-
-  int height=10;
-  int base=20;
-
-  double area_triangle=0.5*height*base;
-
-  print("Area of triangle. $area_triangle");
+  print("Element Frequencies");
+  frequencyMap.forEach((key,count){
+    print("Element $key appears $count time(s)");
+  });
 }

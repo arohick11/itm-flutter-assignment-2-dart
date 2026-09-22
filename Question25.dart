@@ -1,8 +1,8 @@
-int factorial(int n) {
-  if (n <= 1) return 1;
-  return n * factorial(n - 1);
-}
+//Deduplicate a List of integers using list.toSet().toList() and print the unique list.
 
 void main() {
-  print(factorial(5));
+  List<int> list = [3, 1, 2, 3, 1, 2, 4, 5];
+  List<int> uniqueList = list.toSet().toList();
+  print('Original List: $list');
+  print('Unique List: $uniqueList');
 }

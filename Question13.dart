@@ -1,17 +1,12 @@
-void main() {
-  int marks = 85;
+//Create a Map of products and prices. Check if specific keys and values exist 
+//using .containsKey() and .containsValue(). Print all results.
 
-  if (marks < 0 || marks > 100) {
-    print("Invalid marks! Please enter a value between 0 and 100.");
-  } else if (marks >= 90) {
-    print("Grade: A");
-  } else if (marks >= 75) {
-    print("Grade: B");
-  } else if (marks >= 60) {
-    print("Grade: C");
-  } else if (marks >= 45) {
-    print("Grade: D");
-  } else {
-    print("Grade: F");
-  }
+void main() {
+  Map<String, double> products = {'Laptop': 999.99, 'Phone': 499.99};
+
+  print('Contains key "Laptop"? ${products.containsKey('Laptop')}');
+  print('Contains key "Tablet"? ${products.containsKey('Tablet')}');
+
+  print('Contains value 499.99? ${products.containsValue(499.99)}');
+  print('Contains value 199.99? ${products.containsValue(199.99)}');
 }

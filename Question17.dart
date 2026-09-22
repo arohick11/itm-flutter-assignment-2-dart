@@ -1,10 +1,17 @@
+//Given a string, count the frequency of each character (excluding spaces) 
+//using a Map<String, int> and print the character frequency map.
+
 void main() {
-  int n = 10;
-  int sum = 0;
-  int i = 1;
-  while (i <= n) {
-    sum += i;
-    i++;
+  String s = 'hello world';
+  Map<String, int> freq = {};
+
+  for (int i = 0; i < s.length; i++) {
+    String char = s[i];
+    if (char != ' ') {
+      freq[char] = (freq[char] ?? 0) + 1;
+    }
   }
-  print("Sum: $sum");
+
+  print('Character Frequencies for "$s":');
+  print(freq);
 }

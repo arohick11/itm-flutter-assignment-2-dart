@@ -1,13 +1,14 @@
-void main() {
-  int a = 10;
-  int b = 20;
-  int c = 30;
+//Create a list of fruits. Iterate using for-in loop and print each element. 
+//Also use the .forEach() method with a lambda to print each element.
 
-  if (a > b && a > c) {
-    print("$a is the biggest number");
-  } else if (b > a && b > c) {
-    print("$b is the biggest number");
-  } else {
-    print("$c is the biggest number");
+void main() {
+  List<String> fruits = ['Apple', 'Banana', 'Mango', 'Orange', 'Grapes'];
+
+  print('Using for-in loop:');
+  for (String fruit in fruits) {
+    print(fruit);
   }
+
+  print('\nUsing .forEach() with lambda:');
+  fruits.forEach((fruit) => print(fruit));
 }

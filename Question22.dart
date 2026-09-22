@@ -1,11 +1,13 @@
-import 'dart:io';
+//Convert a List containing duplicate integers to a Set, and then convert the Set 
+//back into a List of unique elements. Print the original list, set, and unique list.
 
 void main() {
-  int rows = 5;
-  for (int i = 1; i <= rows; i++) {
-    for (int j = 1; j <= i; j++) {
-      stdout.write('* ');
-    }
-    stdout.writeln();
-  }
+  List<int> list = [1, 2, 2, 3, 3, 4];
+  print('Original List: $list');
+
+  Set<int> set = list.toSet();
+  print('Set: $set');
+
+  List<int> uniqueList = set.toList();
+  print('Unique List: $uniqueList');
 }
